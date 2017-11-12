@@ -1,6 +1,32 @@
-# WinEnv
-Chocolatelyを使ってWindows環境を構築する。
+# WinToolsAutoSetup
+Windows環境にて、powershellやchocolateyを使い、なるべく自動でツールのセットアップを行います。
 
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+## 追加アプリケーション
+以下のアプリケーションをインストールします。
 
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+### powershellによって追加するアプリケーション
+- chocolatey
+
+### chocolateyによって追加するアプリケーション
+#### basic.config
+- chocolatey GUI
+- google Chrome
+- f.lux
+- 7zip
+- Atom Editor
+- keypirinha
+- sumatrapdf
+- github desktop
+- cmder
+- winmerge-jp
+- greenshot
+
+## 実行方法
+
+1. ツールを展開したい場所にフォルダを作成する。
+2. 1.で作成したフォルダに「WinToolsAutoSetup.bat」をダウンロードする。
+3. 2.でダウンロードした「WinToolsAutoSetup.bat」を実行する。
+
+``備考``
+- chocolateyファイルは都度、Githubよりダウンロードします。
+    ダウンロード不要の場合は、33行目をコメントアウトしてください。
