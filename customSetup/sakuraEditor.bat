@@ -46,15 +46,13 @@ if not exist "%SAKURA_INI_PATH%" (
 :: SAKURAで開く（コンテキストメニュー）を設定
 set /p a_context_menu="コンテキストメニューに「SAKURAで開く」を追加しますか？ [y/N] : "
 if /i "!a_context_menu!" == "y" (
-    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "" /t "REG_EXPAND_SZ" /d "SAKURAで開く" /f
-    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "Icon" /t "REG_EXPAND_SZ" /d %PROGRAM_PATH% /f
-    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor\command" /v "" /t "REG_EXPAND_SZ" /d """%PROGRAM_PATH%"" ""%%1""" /f
+    call libs/createOpenMenu.bat "SAKURAで開く" %PROGRAM_PATH% """%PROGRAM_PATH%"" ""%%1"""
 )
 
 :: スタートメニューに登録
 set /p a_start_menu="スタートメニューに「SakuraEditor」を追加しますか？ [y/N] : "
 if /i "!a_start_menu!" == "y" (
-  cscript /nologo ./libs/createShortcut.vbs %SHORTCUT_PATH% %PROGRAM_PATH%
+  call libs/createShortcut.bat %SHORTCUT_PATH% %PROGRAM_PATH%
 )
 
 endlocal
