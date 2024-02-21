@@ -16,6 +16,9 @@ set APP_DIR="%TOOLS_DIR:"=%\%APP_NAME:"=%"
 set SAKURA_INI_URL="https://gist.githubusercontent.com/roppi/c0859769fe5fe03fcf831ef281dc0c52/raw/77315abcfc55339d247d0fa76ff6d3beb48d59e1/sakura.ini"
 set SAKURA_INI_PATH="%APP_DIR:"=%\sakura.ini"
 
+set SHORTCUT_PATH="%APPDATA%\Microsoft\Windows\Start Menu\Programs\%APP_NAME:"=%.lnk"
+set PROGRAM_PATH="%APP_DIR:"=%\sakura.exe"
+
 
 :: ファイルをダウンロード
 set DL_FLG=1
@@ -41,11 +44,17 @@ if not exist "%SAKURA_INI_PATH%" (
 )
 
 :: SAKURAで開く（コンテキストメニュー）を設定
-set /p a_win10_menu="コンテキストメニューに「SAKURAで開く」を追加しますか？ [y/N] : "
-if /i "!a_win10_menu!" == "y" (
+set /p a_context_menu="コンテキストメニューに「SAKURAで開く」を追加しますか？ [y/N] : "
+if /i "!a_context_menu!" == "y" (
     reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "" /t "REG_EXPAND_SZ" /d "SAKURAで開く" /f
-    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "Icon" /t "REG_EXPAND_SZ" /d "%APP_DIR:"=%\sakura.exe" /f
-    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor\command" /v "" /t "REG_EXPAND_SZ" /d """%APP_DIR:"=%\sakura.exe"" ""%%1""" /f
+    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "Icon" /t "REG_EXPAND_SZ" /d %PROGRAM_PATH% /f
+    reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor\command" /v "" /t "REG_EXPAND_SZ" /d """%PROGRAM_PATH%"" ""%%1""" /f
+)
+
+:: スタートメニューに登録
+set /p a_start_menu="スタートメニューに「SakuraEditor」を追加しますか？ [y/N] : "
+if /i "!a_start_menu!" == "y" (
+  cscript /nologo ./libs/createShortcut.vbs %SHORTCUT_PATH% %PROGRAM_PATH%
 )
 
 endlocal
