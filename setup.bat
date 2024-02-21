@@ -90,6 +90,7 @@ if /i not "!a_custom_install!" == "n" (
 
     :: カスタムセットアップフォルダ内のバッチを順次実行
     for %%f in (customSetup\*.bat) do (
+        set a_custom_install_s=""
         set /p a_custom_install_s="%%f を実行しますか？ [Y/n] : "
         if /i not "!a_custom_install_s!" == "n" ( 
             call "%%f" %TOOLS_DIR% %TOOLS_CACHE_DIR%

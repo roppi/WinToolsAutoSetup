@@ -24,7 +24,7 @@ Windows 11 にて、なるべく自動でセットアップを行います。
 - スタートメニューにWeb検索結果が表示されないようにする
 - WSL2 の導入
 
-### 2. Winget対応アプリのインストール）
+### 2. Winget対応アプリのインストール
 - Winget（アプリインストーラー）を使用したアプリのインストールを行います。
 - 導入アプリは `winget_apps.ini` に記載しています。
     - 必要にあわせてこのファイルをカスタマイズしてください。
@@ -106,7 +106,7 @@ Microsoft製の軽量・高機能なエディタです。
 #### Docker.DockerDesktop
 https://www.docker.com/ja-jp/products/docker-desktop/
 
-コンテナ実行環境の Docker を Windowss で使えるようにします。  
+コンテナ実行環境の Docker を Windows で使えるようにします。  
 WSL2上で実行でき、VS Code + RemoteContainers を使うことで、アプリの実行環境をホストとほぼ切り離して管理できます。
 
 #### Microsoft.WindowsTerminal
