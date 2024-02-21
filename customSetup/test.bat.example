@@ -1,0 +1,6 @@
+@echo off
+
+set TOOLS_DIR=%1
+set TOOLS_CACHE_DIR=%2
+
+echo %TOOLS_DIR% %TOOLS_CACHE_DIR%
