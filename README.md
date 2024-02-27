@@ -50,6 +50,25 @@ Windows 11 にて、なるべく自動でセットアップを行います。
     - 1. ツール展開用フォルダ（C:¥Tools）
     - 2. ツールダウンロード用フォルダ（C:¥Tools¥.cache）
 
+### カスタムバッチで導入しているアプリ
+#### サクラエディタ
+https://sakura-editor.github.io/
+
+多機能なテキストエディタです。
+
+#### サクラエディタ
+https://sakura-editor.github.io/
+
+多機能なテキストエディタです。
+矩形選択やフォルダ内Grep一括置換などの操作性で選びます。
+
+
+#### Keyhac
+https://sites.google.com/site/craftware/keyhac-ja
+
+ショートカットキーを自由に設定できるとても便利なツールです。
+合わせて、個人的に[カスタマイズした設定](https://github.com/roppi/KeyhacScripts)をダウンロードします。
+
 ## winget_apps.ini に記載しているアプリのちょっとした紹介
 ### 基本的なアプリ
 #### 7zip.7zip  
