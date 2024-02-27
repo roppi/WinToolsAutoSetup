@@ -55,13 +55,7 @@ Windows 11 にて、なるべく自動でセットアップを行います。
 https://sakura-editor.github.io/
 
 多機能なテキストエディタです。
-
-#### サクラエディタ
-https://sakura-editor.github.io/
-
-多機能なテキストエディタです。
-矩形選択やフォルダ内Grep一括置換などの操作性で選びます。
-
+矩形選択やフォルダ内Grep一括置換などの操作性が良好です。
 
 #### Keyhac
 https://sites.google.com/site/craftware/keyhac-ja
