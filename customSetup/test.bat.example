@@ -3,4 +3,5 @@
 set TOOLS_DIR=%1
 set TOOLS_CACHE_DIR=%2
 
+:: ”CˆÓ‚Ìˆ—‚È‚Ç
 echo %TOOLS_DIR% %TOOLS_CACHE_DIR%

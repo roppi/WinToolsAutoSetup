@@ -62,4 +62,5 @@ if /i "!a_start_up!" == "y" (
   call libs\createShortcut.bat %STARTUP_PATH% %PROGRAM_PATH%
 )
 
+
 endlocal

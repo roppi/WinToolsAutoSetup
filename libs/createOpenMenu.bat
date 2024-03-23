@@ -14,4 +14,5 @@ set EXEC_CMD=%3
     reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor" /v "Icon" /t "REG_EXPAND_SZ" /d %ICON_PATH% /f
     reg add "HKEY_CLASSES_ROOT\*\shell\SakuraEditor\command" /v "" /t "REG_EXPAND_SZ" /d %EXEC_CMD% /f
 
+
 endlocal

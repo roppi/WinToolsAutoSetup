@@ -9,3 +9,4 @@ Set oWS = WScript.CreateObject("WScript.Shell")
 Set oLink = oWS.CreateShortcut(shortcutPath)
 oLink.TargetPath = programPath
 oLink.Save
+

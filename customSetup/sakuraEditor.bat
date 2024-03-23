@@ -55,4 +55,5 @@ if /i "!a_start_menu!" == "y" (
   call libs/createShortcut.bat %SHORTCUT_PATH% %PROGRAM_PATH%
 )
 
+
 endlocal

@@ -11,4 +11,5 @@ set PROGRAM_PATH=%2
 :: DOSコマンドでは作成できないため、VBScriptを使用して作成
 cscript /nologo libs/createShortcut.vbs %SHORTCUT_PATH% %PROGRAM_PATH%
 
+
 endlocal
