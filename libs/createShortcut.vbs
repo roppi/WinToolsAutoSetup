@@ -1,10 +1,10 @@
 Dim shortcutPath, targetPath
 
-' å¼•æ•°ã‚ˆã‚Šãƒ‘ã‚¹ã‚’è¨­å®š
+' ˆø”‚æ‚èƒpƒX‚ğİ’è
 shortcutPath = WScript.Arguments(0)
 programPath = WScript.Arguments(1)
 
-' ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚’ä½œæˆ
+' ƒVƒ‡[ƒgƒJƒbƒg‚ğì¬
 Set oWS = WScript.CreateObject("WScript.Shell")
 Set oLink = oWS.CreateShortcut(shortcutPath)
 oLink.TargetPath = programPath
